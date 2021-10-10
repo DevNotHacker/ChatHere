@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="ChatHere! The place where people chat.">
+    <link rel="icon" href="favicon.jpg" type="image/jpg" />
+    <title>ChatHere!</title>
+  </head>
+  <body>
+      <script>
+  function t() {
+    window.open('https://thechatapp.cookiesnowowl.repl.co','name','width=' + screen.width + ',height=' + screen.height)
+  }
+  </script>
+    <h1 class="h11">The place where people chat.</h1>
+    <h1 class="h11"><i>Introducing...</i></h1>
+    <center><a href="https://thechatapp.cookiesnowowl.repl.co" target="popup" onclick="t()" class="looksnice">TheChatAppV1.0.4</a></center>
+    <h1 class="h11">Featuring<ul><li>Quality chatting with your friends.</li><li>Links and image support...</li><li>Background customization and moderation</li><li>No cookies, no tracking.</li><li>And more...</li></ul>
+    <div class="slideshow-container">
+      <!-- Full-width slides/quotes -->
+      <div class="mySlides">
+        <q>The best way to chat with friends anonymously!</q>
+        <p class="author">- MainDev</p>
+      </div>
+      <div class="mySlides">
+        <q>This place stores no information on me. There aren't even tracking cookies.</q>
+        <p class="author">- timmy</p>
+      </div>
+      <div class="mySlides">
+        <q>Click the button above, to start chatting with your friends!</q>
+        <p class="author">Start chatting!</p>
+      </div>
+    <!-- Next/prev buttons -->
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <style>
+  body {
+    background-color: black;
+  }
+  .h11 {
+    text-align: center;
+    color: white;
+  }
+  .looksnice {
+    display: block;
+        text-align: center;
+  border-radius: 15px ;
+  height: 100%;
+  background-color: white;
+  color: red;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  text-size: 16px;
+  font-size: 160px;
+  width: 80%;
+  }
+  .looksnice:hover {
+    display: block;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: red;
+  color: white;
+}
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+q{
+  color: black;
+}
+
+/* Next & previous buttons */
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+  </style>
+  <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+setInterval(function() {plusSlides(1)}, 3000)
+</script>
+  </body>
+</html>
